@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+# Source networking configuration.
+. /etc/sysconfig/network
+
+# Check that networking is up.
+[ "$NETWORKING" = "no" ] && exit 0
+
+http="/usr/local/listen/bin/listen"
+prog=$(basename $http)
+pid_file="/usr/local/listen/bin/listen/logs/listen.pid"
+start(){
+  pid=$(cat pid_file)
+  ps -aux | grep $pid &>/dev/null
+  [ $? -eq 0 ] && echo "listen running" && exit 1
+  $http &
+  ps -aux |
+}
+
+stop(){
+
+}
+
+restart(){
+
+}
+
+status(){
+
+}
