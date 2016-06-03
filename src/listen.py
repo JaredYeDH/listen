@@ -11,38 +11,40 @@ import urllib
 import shutil
 from OpenSSL import SSL
 from optparse import OptionParser
+import select,errno
 import pubutil
 import config
 #check path
-if config.ssl=="on":
-    if not pubutil.checkfile(config.privatekey):
-        print "Error: privatekey \""+config.privatekey+"\" No such file or directory."
-        sys.exit()
-
-    if not pubutil.checkfile(config.certificate):
-        print "Error: certificate \""+config.certificate+"\" No such file or directory."
-        sys.exit()
-
-if not pubutil.checkpath(config.DocumentRoot):
-    print "Error: DocumentRoot \""+config.DocumentRoot+"\" No such file or directory."
-    sys.exit()
-
-if not pubutil.checkfile(config.Logfile):
-    print "Error: Logfile \""+config.Logfile+"\" No such file or directory."
-    sys.exit()
-
-if not pubutil.checkfile(config.errorfile):
-    print "Error: errorfile \""+config.errorfile+"\" No such file or directory."
-    sys.exit()
-
-if config.cgi_moudle=="on":
-    if len(config.cgi_path)==0:
-        print "Error: cgi_path is null? please set."
-        sys.exit()
-    for _path in config.cgi_path:
-        if not pubutil.checkpath(pubutil.cur_file_dir()+'/'+_path):
-            print "Error: cgi_path \""+pubutil.cur_file_dir()+'/'+_path+"\" No such file or directory."
+def check():
+    if config.ssl=="on":
+        if not pubutil.checkfile(config.privatekey):
+            print "Error: privatekey \""+config.privatekey+"\" No such file or directory."
             sys.exit()
+    
+        if not pubutil.checkfile(config.certificate):
+            print "Error: certificate \""+config.certificate+"\" No such file or directory."
+            sys.exit()
+    
+    if not pubutil.checkpath(config.DocumentRoot):
+        print "Error: DocumentRoot \""+config.DocumentRoot+"\" No such file or directory."
+        sys.exit()
+    
+    if not pubutil.checkfile(config.Logfile):
+        print "Error: Logfile \""+config.Logfile+"\" No such file or directory."
+        sys.exit()
+    
+    if not pubutil.checkfile(config.errorfile):
+        print "Error: errorfile \""+config.errorfile+"\" No such file or directory."
+        sys.exit()
+    
+    if config.cgi_moudle=="on":
+        if len(config.cgi_path)==0:
+            print "Error: cgi_path is null? please set."
+            sys.exit()
+        for _path in config.cgi_path:
+            if not pubutil.checkpath(pubutil.cur_file_dir()+'/'+_path):
+                print "Error: cgi_path \""+pubutil.cur_file_dir()+'/'+_path+"\" No such file or directory."
+                sys.exit()
 bind_ip=config.bind_ip
 port=config.port
 #system logs
@@ -272,10 +274,14 @@ def main(HandlerClass = ServerHandler,ServerClass = SecureHTTPServer):
         try:
             if config.ssl=="on":
                 server = (bind_ip, port)
-            elif config.Multiprocess=="on":
+            elif config.Worker=='Multiprocess':
                 server = ProcessHTTPServer((bind_ip, port), ServerHandler)
-            elif config.Multithreading=="on":
+            elif config.Worker=='Multithreading':
                 server = ThreadedHTTPServer((bind_ip, port), ServerHandler)
+            elif config.Worker=='select':
+                pass
+            elif onfig.Worker=='epoll':
+                pass
             else:
                 server = HTTPServer((bind_ip, port), ServerHandler)
         except Exception,e:
@@ -305,6 +311,6 @@ if __name__ == '__main__':
     opts, args = parser.parse_args()
 
     if opts.verbose:
-        print "Yon V1.0.1 beta."
+        print "listen V1.0.1 beta."
         sys.exit();
     main()
