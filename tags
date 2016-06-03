@@ -79,149 +79,193 @@
 .welcome p	www/html/style.css	/^.welcome p{$/;"	c
 BaseHTTPRequestHandler	/home/kiosk/Desktop/listen/src/listen.py	/^from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer$/;"	i
 BaseHTTPRequestHandler	src/listen.py	/^from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer$/;"	i
+BaseHTTPRequestHandler	src/listen.py~	/^from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer$/;"	i
 BaseServer	/home/kiosk/Desktop/listen/src/listen.py	/^from SocketServer import BaseServer$/;"	i
 BaseServer	src/listen.py	/^from SocketServer import BaseServer$/;"	i
+BaseServer	src/listen.py~	/^from SocketServer import BaseServer$/;"	i
 CGIHTTPRequestHandler	/home/kiosk/Desktop/listen/src/listen.py	/^from CGIHTTPServer import CGIHTTPRequestHandler$/;"	i
 CGIHTTPRequestHandler	src/listen.py	/^from CGIHTTPServer import CGIHTTPRequestHandler$/;"	i
+CGIHTTPRequestHandler	src/listen.py~	/^from CGIHTTPServer import CGIHTTPRequestHandler$/;"	i
 ConfigObj	src/config.py	/^from configobj import ConfigObj$/;"	i
 DocumentRoot	src/config.py	/^DocumentRoot=yonconfig['root']['DocumentRoot']$/;"	v
 Expires	src/config.py	/^Expires=yonconfig['cache']['Expires']$/;"	v
 ExpiresTypes	src/config.py	/^ExpiresTypes = {$/;"	v
 ForkingMixIn	/home/kiosk/Desktop/listen/src/listen.py	/^from SocketServer import ThreadingMixIn,ForkingMixIn$/;"	i
 ForkingMixIn	src/listen.py	/^from SocketServer import ThreadingMixIn,ForkingMixIn$/;"	i
+ForkingMixIn	src/listen.py~	/^from SocketServer import ThreadingMixIn,ForkingMixIn$/;"	i
 HTTPServer	/home/kiosk/Desktop/listen/src/listen.py	/^from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer$/;"	i
 HTTPServer	src/listen.py	/^from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer$/;"	i
+HTTPServer	src/listen.py~	/^from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer$/;"	i
 Indexes	src/config.py	/^Indexes=yonconfig['root']['Indexes']$/;"	v
 Logfile	src/config.py	/^Logfile=yonconfig['log']['Logfile']$/;"	v
 MSG_USAGE	/home/kiosk/Desktop/listen/src/listen.py	/^    MSG_USAGE = "Yon [-v][-h]"$/;"	v
 MSG_USAGE	src/listen.py	/^    MSG_USAGE = "Yon [-v][-h]"$/;"	v
-Multiprocess	src/config.py	/^Multiprocess=yonconfig['work']['Multiprocess']$/;"	v
-Multithreading	src/config.py	/^Multithreading=yonconfig['work']['Multithreading']$/;"	v
+MSG_USAGE	src/listen.py~	/^    MSG_USAGE = "Yon [-v][-h]"$/;"	v
 OptionParser	/home/kiosk/Desktop/listen/src/listen.py	/^from optparse import OptionParser$/;"	i
 OptionParser	src/listen.py	/^from optparse import OptionParser$/;"	i
+OptionParser	src/listen.py~	/^from optparse import OptionParser$/;"	i
 ProcessHTTPServer	/home/kiosk/Desktop/listen/src/listen.py	/^class ProcessHTTPServer(ForkingMixIn, HTTPServer):$/;"	c
 ProcessHTTPServer	src/listen.py	/^class ProcessHTTPServer(ForkingMixIn, HTTPServer):$/;"	c
+ProcessHTTPServer	src/listen.py~	/^class ProcessHTTPServer(ForkingMixIn, HTTPServer):$/;"	c
 SSL	/home/kiosk/Desktop/listen/src/listen.py	/^from OpenSSL import SSL$/;"	i
 SSL	src/listen.py	/^from OpenSSL import SSL$/;"	i
+SSL	src/listen.py~	/^from OpenSSL import SSL$/;"	i
 SecureHTTPServer	/home/kiosk/Desktop/listen/src/listen.py	/^class SecureHTTPServer(HTTPServer):$/;"	c
 SecureHTTPServer	src/listen.py	/^class SecureHTTPServer(HTTPServer):$/;"	c
+SecureHTTPServer	src/listen.py~	/^class SecureHTTPServer(HTTPServer):$/;"	c
 ServerHandler	/home/kiosk/Desktop/listen/src/listen.py	/^class ServerHandler(CGIHTTPRequestHandler):$/;"	c
 ServerHandler	src/listen.py	/^class ServerHandler(CGIHTTPRequestHandler):$/;"	c
+ServerHandler	src/listen.py~	/^class ServerHandler(CGIHTTPRequestHandler):$/;"	c
 StringIO	src/config.py	/^    from StringIO import StringIO$/;"	i
 StringIO	src/config.py	/^    from cStringIO import StringIO$/;"	i
 ThreadedHTTPServer	/home/kiosk/Desktop/listen/src/listen.py	/^class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):$/;"	c
 ThreadedHTTPServer	src/listen.py	/^class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):$/;"	c
+ThreadedHTTPServer	src/listen.py~	/^class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):$/;"	c
 ThreadingMixIn	/home/kiosk/Desktop/listen/src/listen.py	/^from SocketServer import ThreadingMixIn,ForkingMixIn$/;"	i
 ThreadingMixIn	src/listen.py	/^from SocketServer import ThreadingMixIn,ForkingMixIn$/;"	i
+ThreadingMixIn	src/listen.py~	/^from SocketServer import ThreadingMixIn,ForkingMixIn$/;"	i
+Work	src/config.py	/^Work=yonconfig['work']['use']$/;"	v
 __init__	/home/kiosk/Desktop/listen/src/listen.py	/^    def __init__(self, server_address, HandlerClass):$/;"	m	class:SecureHTTPServer
 __init__	src/listen.py	/^    def __init__(self, server_address, HandlerClass):$/;"	m	class:SecureHTTPServer
+__init__	src/listen.py~	/^    def __init__(self, server_address, HandlerClass):$/;"	m	class:SecureHTTPServer
 bind_ip	/home/kiosk/Desktop/listen/src/listen.py	/^bind_ip=config.bind_ip$/;"	v
 bind_ip	src/config.py	/^bind_ip=yonconfig['server']['bind_ip']$/;"	v
 bind_ip	src/listen.py	/^bind_ip=config.bind_ip$/;"	v
+bind_ip	src/listen.py~	/^bind_ip=config.bind_ip$/;"	v
 body	www/html/style.css	/^body{$/;"	s
-bubble	src/cgi-bin/index.php	/^function bubble(array $array){$/;"	f
-bubble	src/cgi-bin/index.py	/^def bubble(bad_list):$/;"	f
 cStringIO	src/pubutil.py	/^    import gzip, cStringIO$/;"	i
 certificate	src/config.py	/^certificate=yonconfig['ssl']['certificate']$/;"	v
 cgi	/home/kiosk/Desktop/listen/src/listen.py	/^import string,cgi,time,os,socket,sys$/;"	i
 cgi	src/cgi-bin/index.cgi	/^import cgi$/;"	i
 cgi	src/listen.py	/^import string,cgi,time,os,socket,sys$/;"	i
+cgi	src/listen.py~	/^import string,cgi,time,os,socket,sys$/;"	i
 cgi_extensions	src/config.py	/^cgi_extensions=eval(yonconfig['cgi']['cgi_extensions'], dict(__builtins__=None))$/;"	v
 cgi_moudle	src/config.py	/^cgi_moudle=yonconfig['cgi']['cgi_moudle']$/;"	v
 cgi_path	src/config.py	/^cgi_path=yonconfig['cgi']['cgi_path']$/;"	v
 cgi_pwd	src/config.py	/^cgi_pwd=yonconfig['cgi']['cgi_pwd']$/;"	v
+check	/home/kiosk/Desktop/listen/src/listen.py	/^def check():$/;"	f
 checkfile	src/pubutil.py	/^def checkfile(_path):$/;"	f
 checkpath	src/pubutil.py	/^def checkpath(_path):$/;"	f
 compressBuf	src/pubutil.py	/^def compressBuf(buf,_compresslevel):$/;"	f
 compresslevel	src/config.py	/^compresslevel=int(yonconfig['gzip']['compresslevel'])$/;"	v
 config	/home/kiosk/Desktop/listen/src/listen.py	/^import config$/;"	i
 config	src/listen.py	/^import config$/;"	i
+config	src/listen.py~	/^import config$/;"	i
 configfilename	src/config.py	/^    configfilename = install_path + '\/conf\/listen.conf'$/;"	v
 contentTypes	src/config.py	/^contentTypes=[]$/;"	v
 contentTypes	src/config.py	/^contentTypes=dict(contentTypes)$/;"	v
 copyfile	/home/kiosk/Desktop/listen/src/listen.py	/^    def copyfile(self, source, outputfile):$/;"	m	class:ServerHandler
 copyfile	src/listen.py	/^    def copyfile(self, source, outputfile):$/;"	m	class:ServerHandler
+copyfile	src/listen.py~	/^    def copyfile(self, source, outputfile):$/;"	m	class:ServerHandler
 cur_file_dir	src/pubutil.py	/^def cur_file_dir():$/;"	f
 curdir	/home/kiosk/Desktop/listen/src/listen.py	/^from os import curdir, sep$/;"	i
 curdir	src/listen.py	/^from os import curdir, sep$/;"	i
+curdir	src/listen.py~	/^from os import curdir, sep$/;"	i
 datetime	src/pubutil.py	/^import datetime$/;"	i
 do_GET	/home/kiosk/Desktop/listen/src/listen.py	/^    def do_GET(self):$/;"	m	class:ServerHandler
 do_GET	src/listen.py	/^    def do_GET(self):$/;"	m	class:ServerHandler
+do_GET	src/listen.py~	/^    def do_GET(self):$/;"	m	class:ServerHandler
 do_HEAD	/home/kiosk/Desktop/listen/src/listen.py	/^    def do_HEAD(self):$/;"	m	class:ServerHandler
 do_HEAD	src/listen.py	/^    def do_HEAD(self):$/;"	m	class:ServerHandler
+do_HEAD	src/listen.py~	/^    def do_HEAD(self):$/;"	m	class:ServerHandler
 do_POST	/home/kiosk/Desktop/listen/src/listen.py	/^    def do_POST(self):$/;"	m	class:ServerHandler
 do_POST	src/listen.py	/^    def do_POST(self):$/;"	m	class:ServerHandler
+do_POST	src/listen.py~	/^    def do_POST(self):$/;"	m	class:ServerHandler
+errno	/home/kiosk/Desktop/listen/src/listen.py	/^import select,errno$/;"	i
+errno	src/listen.py	/^import select,errno$/;"	i
+errno	src/listen.py~	/^import select,errno$/;"	i
 errorfile	src/config.py	/^errorfile=yonconfig['log']['errorfile']$/;"	v
 get_http_expiry	src/pubutil.py	/^def get_http_expiry(_Expirestype,_num):$/;"	f
 gzip	src/config.py	/^gzip=yonconfig['gzip']['gzip']$/;"	v
 gzip	src/pubutil.py	/^    import gzip, cStringIO$/;"	i
 handle_one_request	/home/kiosk/Desktop/listen/src/listen.py	/^    def handle_one_request(self):$/;"	m	class:ServerHandler
 handle_one_request	src/listen.py	/^    def handle_one_request(self):$/;"	m	class:ServerHandler
-handler	/home/kiosk/Desktop/listen/src/listen.py	/^    handler=logging.FileHandler(config.errorfile)$/;"	v
+handle_one_request	src/listen.py~	/^    def handle_one_request(self):$/;"	m	class:ServerHandler
 handler	src/listen.py	/^    handler=logging.FileHandler(config.errorfile)$/;"	v
+handler	src/listen.py~	/^    handler=logging.FileHandler(config.errorfile)$/;"	v
 help	/home/kiosk/Desktop/listen/src/listen.py	/^            help="view yorserver version info.")$/;"	v
 help	src/listen.py	/^            help="view yorserver version info.")$/;"	v
+help	src/listen.py~	/^            help="view yorserver version info.")$/;"	v
 html	www/html/style.css	/^html{$/;"	s
 img	www/html/style.css	/^img{border:0px}$/;"	s
 indexpage	src/config.py	/^indexpage=yonconfig['root']['indexpage']$/;"	v
 install_path	src/config.py	/^install_path=r'\/usr\/local\/listen'$/;"	v
-len	src/cgi-bin/index.php	/^ for($i=0, $len=count($array)-1; $i<$len; ++$i){$/;"	v
 list_directory	/home/kiosk/Desktop/listen/src/listen.py	/^    def list_directory(self, path):$/;"	m	class:ServerHandler
 list_directory	src/listen.py	/^    def list_directory(self, path):$/;"	m	class:ServerHandler
+list_directory	src/listen.py~	/^    def list_directory(self, path):$/;"	m	class:ServerHandler
 log_message	/home/kiosk/Desktop/listen/src/listen.py	/^    def log_message(self, format, *args):$/;"	m	class:ServerHandler
 log_message	src/listen.py	/^    def log_message(self, format, *args):$/;"	m	class:ServerHandler
-logger	/home/kiosk/Desktop/listen/src/listen.py	/^    logger=logging.getLogger()$/;"	v
+log_message	src/listen.py~	/^    def log_message(self, format, *args):$/;"	m	class:ServerHandler
 logger	src/listen.py	/^    logger=logging.getLogger()$/;"	v
+logger	src/listen.py~	/^    logger=logging.getLogger()$/;"	v
 logging	/home/kiosk/Desktop/listen/src/listen.py	/^import logging$/;"	i
 logging	src/listen.py	/^import logging$/;"	i
+logging	src/listen.py~	/^import logging$/;"	i
 main	/home/kiosk/Desktop/listen/src/listen.py	/^def main(HandlerClass = ServerHandler,ServerClass = SecureHTTPServer):$/;"	f
 main	src/listen.py	/^def main(HandlerClass = ServerHandler,ServerClass = SecureHTTPServer):$/;"	f
+main	src/listen.py~	/^def main(HandlerClass = ServerHandler,ServerClass = SecureHTTPServer):$/;"	f
 margin:0px	www/html/style.css	/^margin:0px;$/;"	s
-my_list	src/cgi-bin/index.py	/^my_list = [23,45,67,3,56,82,24,23,5,77,19,33,51,99]$/;"	v
 os	/home/kiosk/Desktop/listen/src/listen.py	/^import string,cgi,time,os,socket,sys$/;"	i
 os	src/cgi-bin/index.cgi	/^import os$/;"	i
 os	src/listen.py	/^import string,cgi,time,os,socket,sys$/;"	i
+os	src/listen.py~	/^import string,cgi,time,os,socket,sys$/;"	i
 os	src/pubutil.py	/^import time,os,sys$/;"	i
 padding:0px	www/html/style.css	/^padding:0px;$/;"	s
 page404	src/config.py	/^page404=yonconfig['root']['page404']$/;"	v
 parent_dir	src/pubutil.py	/^def parent_dir(_path):$/;"	f
 parser	/home/kiosk/Desktop/listen/src/listen.py	/^    parser = OptionParser(MSG_USAGE)$/;"	v
 parser	src/listen.py	/^    parser = OptionParser(MSG_USAGE)$/;"	v
+parser	src/listen.py~	/^    parser = OptionParser(MSG_USAGE)$/;"	v
 port	/home/kiosk/Desktop/listen/src/listen.py	/^port=config.port$/;"	v
 port	src/config.py	/^port=int(yonconfig['server']['port'])$/;"	v
 port	src/listen.py	/^port=config.port$/;"	v
+port	src/listen.py~	/^port=config.port$/;"	v
 privatekey	src/config.py	/^privatekey=yonconfig['ssl']['privatekey']$/;"	v
 protocol_version	/home/kiosk/Desktop/listen/src/listen.py	/^    protocol_version=config.protocol_version$/;"	v	class:ServerHandler
 protocol_version	src/config.py	/^protocol_version = yonconfig['Http-version']['protocol_version']$/;"	v
 protocol_version	src/listen.py	/^    protocol_version=config.protocol_version$/;"	v	class:ServerHandler
+protocol_version	src/listen.py~	/^    protocol_version=config.protocol_version$/;"	v	class:ServerHandler
 pubutil	/home/kiosk/Desktop/listen/src/listen.py	/^import pubutil$/;"	i
 pubutil	src/listen.py	/^import pubutil$/;"	i
+pubutil	src/listen.py~	/^import pubutil$/;"	i
 secs_from_days	src/pubutil.py	/^def secs_from_days(_seconds,_num):$/;"	f
+select	/home/kiosk/Desktop/listen/src/listen.py	/^import select,errno$/;"	i
+select	src/listen.py	/^import select,errno$/;"	i
+select	src/listen.py~	/^import select,errno$/;"	i
 sep	/home/kiosk/Desktop/listen/src/listen.py	/^from os import curdir, sep$/;"	i
 sep	src/listen.py	/^from os import curdir, sep$/;"	i
+sep	src/listen.py~	/^from os import curdir, sep$/;"	i
 server_version	/home/kiosk/Desktop/listen/src/listen.py	/^    server_version=config.server_version$/;"	v	class:ServerHandler
 server_version	src/config.py	/^server_version = yonconfig['version']['server_version']$/;"	v
 server_version	src/listen.py	/^    server_version=config.server_version$/;"	v	class:ServerHandler
+server_version	src/listen.py~	/^    server_version=config.server_version$/;"	v	class:ServerHandler
 setup	/home/kiosk/Desktop/listen/src/listen.py	/^    def setup(self):$/;"	m	class:ServerHandler
 setup	src/listen.py	/^    def setup(self):$/;"	m	class:ServerHandler
+setup	src/listen.py~	/^    def setup(self):$/;"	m	class:ServerHandler
 shutil	/home/kiosk/Desktop/listen/src/listen.py	/^import shutil$/;"	i
 shutil	src/listen.py	/^import shutil$/;"	i
+shutil	src/listen.py~	/^import shutil$/;"	i
 socket	/home/kiosk/Desktop/listen/src/listen.py	/^import string,cgi,time,os,socket,sys$/;"	i
 socket	src/listen.py	/^import string,cgi,time,os,socket,sys$/;"	i
+socket	src/listen.py~	/^import string,cgi,time,os,socket,sys$/;"	i
 ssl	src/config.py	/^ssl=yonconfig['ssl']['ssl']$/;"	v
 string	/home/kiosk/Desktop/listen/src/listen.py	/^import string,cgi,time,os,socket,sys$/;"	i
 string	src/listen.py	/^import string,cgi,time,os,socket,sys$/;"	i
+string	src/listen.py~	/^import string,cgi,time,os,socket,sys$/;"	i
 sys	/home/kiosk/Desktop/listen/src/listen.py	/^import string,cgi,time,os,socket,sys$/;"	i
 sys	src/listen.py	/^import string,cgi,time,os,socket,sys$/;"	i
+sys	src/listen.py~	/^import string,cgi,time,os,socket,sys$/;"	i
 sys	src/pubutil.py	/^import time,os,sys$/;"	i
 sys_version	/home/kiosk/Desktop/listen/src/listen.py	/^    sys_version=config.sys_version$/;"	v	class:ServerHandler
 sys_version	src/config.py	/^sys_version = yonconfig['version']['sys_version']$/;"	v
 sys_version	src/listen.py	/^    sys_version=config.sys_version$/;"	v	class:ServerHandler
-temp	src/cgi-bin/index.php	/^             $temp = $array[$j];$/;"	v
+sys_version	src/listen.py~	/^    sys_version=config.sys_version$/;"	v	class:ServerHandler
 time	/home/kiosk/Desktop/listen/src/listen.py	/^import string,cgi,time,os,socket,sys$/;"	i
 time	src/listen.py	/^import string,cgi,time,os,socket,sys$/;"	i
+time	src/listen.py~	/^import string,cgi,time,os,socket,sys$/;"	i
 time	src/pubutil.py	/^import time,os,sys$/;"	i
 tmp	src/config.py	/^    tmp=[]$/;"	v
 urllib	/home/kiosk/Desktop/listen/src/listen.py	/^import urllib$/;"	i
 urllib	src/listen.py	/^import urllib$/;"	i
+urllib	src/listen.py~	/^import urllib$/;"	i
 yonconfig	src/config.py	/^    yonconfig = ConfigObj(configfilename, encoding="utf8")$/;"	v

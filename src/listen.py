@@ -20,23 +20,23 @@ def check():
         if not pubutil.checkfile(config.privatekey):
             print "Error: privatekey \""+config.privatekey+"\" No such file or directory."
             sys.exit()
-    
+
         if not pubutil.checkfile(config.certificate):
             print "Error: certificate \""+config.certificate+"\" No such file or directory."
             sys.exit()
-    
+
     if not pubutil.checkpath(config.DocumentRoot):
         print "Error: DocumentRoot \""+config.DocumentRoot+"\" No such file or directory."
         sys.exit()
-    
+
     if not pubutil.checkfile(config.Logfile):
         print "Error: Logfile \""+config.Logfile+"\" No such file or directory."
         sys.exit()
-    
+
     if not pubutil.checkfile(config.errorfile):
         print "Error: errorfile \""+config.errorfile+"\" No such file or directory."
         sys.exit()
-    
+
     if config.cgi_moudle=="on":
         if len(config.cgi_path)==0:
             print "Error: cgi_path is null? please set."
@@ -45,6 +45,7 @@ def check():
             if not pubutil.checkpath(pubutil.cur_file_dir()+'/'+_path):
                 print "Error: cgi_path \""+pubutil.cur_file_dir()+'/'+_path+"\" No such file or directory."
                 sys.exit()
+
 bind_ip=config.bind_ip
 port=config.port
 #system logs
@@ -56,7 +57,10 @@ try:
 except IOError, e:
     print "+"+str(e)+"+"
 
-
+#vhost
+def dovhost():
+    pass
+# https
 class SecureHTTPServer(HTTPServer):
     def __init__(self, server_address, HandlerClass):
         BaseServer.__init__(self, server_address, HandlerClass)
@@ -67,6 +71,7 @@ class SecureHTTPServer(HTTPServer):
         self.server_bind()
         self.server_activate()
 
+#
 class ServerHandler(CGIHTTPRequestHandler):
 
     #webserver info
@@ -74,7 +79,8 @@ class ServerHandler(CGIHTTPRequestHandler):
     sys_version=config.sys_version
     protocol_version=config.protocol_version
     CGIHTTPRequestHandler.cgi_directories = config.cgi_path
-
+    def do_Poxy():
+        pass
     def handle_one_request(self):
         try:
             self.raw_requestline = self.rfile.readline(65537)
@@ -111,6 +117,7 @@ class ServerHandler(CGIHTTPRequestHandler):
         self.rfile = socket._fileobject(self.request, "rb", self.rbufsize)
         self.wfile = socket._fileobject(self.request, "wb", self.wbufsize)
 
+#处理get
     def do_GET(self):
         try:
             #go to deault page.
@@ -119,7 +126,7 @@ class ServerHandler(CGIHTTPRequestHandler):
                     self.send_response(200)
                     self.send_header("Content-type", "text/html")
                     self.end_headers()
-                    f= self.list_directory(DocumentRoot+self.path)
+                    f= self.list_directory(config.DocumentRoot+self.path)
                     self.copyfile(f, self.wfile)
                     f.close()
                     return
@@ -302,7 +309,7 @@ def main(HandlerClass = ServerHandler,ServerClass = SecureHTTPServer):
 
 if __name__ == '__main__':
     #定义命令行参数
-    MSG_USAGE = "Yon [-v][-h]"
+    MSG_USAGE = "listen [-v][-h]"
     parser = OptionParser(MSG_USAGE)
 
     parser.add_option("-v","--version", action="store_true", dest="verbose",

@@ -65,11 +65,7 @@ certificate=yonconfig['ssl']['certificate']
 Expires=yonconfig['cache']['Expires']
 
 #Multithreading support
-Multithreading=yonconfig['work']['Multithreading']
-
-#Multiprocess support
-Multiprocess=yonconfig['work']['Multiprocess']
-
+Worker=yonconfig['worker']['use']
 #set document_root
 DocumentRoot=yonconfig['root']['DocumentRoot']
 
@@ -90,6 +86,5 @@ errorfile=yonconfig['log']['errorfile']
 
 #set cgi(on/off)
 cgi_moudle=yonconfig['cgi']['cgi_moudle']
-cgi_path=yonconfig['cgi']['cgi_path']
 cgi_pwd=yonconfig['cgi']['cgi_pwd']
 cgi_extensions=eval(yonconfig['cgi']['cgi_extensions'], dict(__builtins__=None))
